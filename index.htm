@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <meta charset="UTF-8">
+    <title>Edugyan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="Description" content="Edugyan is an online educational marketplace that aims to provide a platform where  students from around the world can access knowledge through notes like never before. Created in 2017, by a group of student of Vivekananda Institute of Professional Studies">
+<meta name="Keywords" content="edugyan ,education, notes, vips,bca,bba,mba,mca,bcom,study,Edugyan,notes for bca, ">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link href="images/faviconi.png" rel="favicon icon" type="image/png" />
+   <link rel="stylesheet" type="text/css" href="css/stylemob.css">
+      <link rel="stylesheet" type="text/css" href="css/m_style.css">
+
+
+<link href="https://fonts.googleapis.com/css?family=Dosis|Kalam:700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Rochester" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+
+</head>
+<body>
+<div id="load_screen">
+		<div class="container_banner">
+			<div class="banner">
+				~ EDUGYAN LOADING  ~
+				<div class="banner-left"></div>
+				<div class="banner-right"></div>
+			</div>
+		</div>
+	</div>
+
+<div id="wrapper">
+	<div id="header">
+	<img src="images/background.jpg" alt="firstbkg">
+	</div>
+
+
+		<div id="content">
+			<div id="navbar" class="nav">
+            <div id="logo">Edugyan</div> 
+
+            
+
+            <ul id="menu">
+            <li class="nav-item"><a href="#aboutUs" class="scroll-link">About Us</a></li>
+            <li class="nav-item"><a href="#service" class="scroll-link">Services</ali>
+            <li class="nav-item"><a href="#team" class="scroll-link">Team</a></li>
+
+            <li class="nav-item"><a href="#" id="Btn" onclick="login_show()" class="button_login" role="button">Login/SignUp</a></li>
+            <li class="nav-item"><a href="#" id="myBtn" onclick="div_show()" class="button_contact" role="button">Contact Us</a></li>
+            </ul>
+
+            
+			</div>
+		</div>
+    <div id="header_mob">
+    <img src="images/bkg_3.png">
+  </div>
+    <div id="content_mob">
+    
+            <div id="navbar_mob" class="dropdown_mob">
+                 <button onclick="myFunction_mob()" class="dropbtn_mob">Dropdown</button>
+                      <div id="menu_mob" class="dropdown-content">
+                            <a href="#aboutUs" class="scroll-link">About Us</a>                         
+                             <a href="#service" class="scroll-link">Services</a>
+                             <a href="#team" class="scroll-link">  Team  </a>
+                           <a href="#" id="Btn" onclick="login_show()" class="button_login" role="button">Login/SignUp</a>
+                           <a href="#" id="myBtn" onclick="div_show()" class="button_contact" role="button">Contact Us</a>
+                         </div>
+
+            
+      </div>
+    </div>
+
+
+
+		<div id="main">
+			<h1>Welcome To Edugyan</h1><hr>
+		</div>
+	
+</div>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Contact Us</h2>
+    </div>
+    <div class="modal-body"> 
+    <!-- Contact Us Form -->
+<form method="POST" action="http://formspree.io/storage.edugyan@gmail.com" id="form_contact" name="form">
+<input id="name" name="name" placeholder="Name" type="text"><br>
+<input id="email" name="email" placeholder="Email" type="text"><br>
+<textarea id="msg" name="message" placeholder="Message"></textarea><br>
+  <button  onclick="checkempty()" type="submit" id="submit">Send</button>
+
+</form>
+    </div>
+    <div class="modal-footer">
+      <h3><center>&copy;EDUGYAN &reg;</center></h3>
+    </div>
+  </div>
+
+</div>
+
+<!-- The Modal -->
+<div id="myModallogin" class="login-modal">
+
+  <!-- Modal content -->
+  <div class="login-modal-content">
+    <div class="login-modal-header">
+      <span class="login-close">&times;</span>
+      <center><h2>Edugyan</h2> </center>
+    </div>
+    <div class="login-modal-body"> 
+
+<div class="tab">
+  <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'login')"  id="defaultOpen">Login</a>
+  <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'signup')">SignUp</a>
+  
+</div>
+
+<div id="login" class="tabcontent">
+          <h1>Welcome Back!</h1>
+          
+          <form  action="/" method="post">
+          
+            <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input id="email_signin" name="email_signin type="email"required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input id="password_signin" name="password_signin" type="password"required autocomplete="off"/>
+          </div>
+          <div id="Btn_forgot">
+         <a href="#"  onclick="sendPasswordReset()" role="button">Forgot Password ?</a>
+         </div>
+
+
+          
+          <button class="button button-block" type="button" onclick="toggleSignIn()"/> Log In </button>
+          
+          </form>
+
+        
+</div>
+
+<div id="signup" class="tabcontent">
+          <h1>Sign Up for Free</h1>
+          
+       <section id="section_signup">          
+          <div class="top-row">
+            
+
+          <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input name="email_signup" id="email_signup" type="email"required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Set A Password<span class="req">*</span>
+            </label>
+            <input name="password_signup" id="password_signup" type="password"required autocomplete="off"/>
+          </div>
+          
+          <button  id="btn_signup" type="button" class="button button-block"  onclick="handleSignUp()"/> Get Started </button>
+          
+          </section>
+
+
+</div>
+
+ </div>     
+    <div class="login-modal-footer">
+      <h3><center><hr></center></h3>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="content_main-abtus">
+<section id="aboutUs" >
+<!--Aboutus-->
+<div class="inner_wrapper">
+  <div class="container">
+    <h2>About Us</h2>
+			<h3>Edugyan is an online educational marketplace that aims to provide a platform where  students from around the world can access knowledge through notes like never before. Created in 2017, by a group of student of Vivekananda Institute of Professional Studies
+It has stemmed out from the idea that the more knowledge you share, the more it empowers you. And Edugyan truly give you that opportunity in the real sense of the word. It lets you access self-prepared academic notes.<br>>Edugyan is an online educational marketplace that aims to provide a platform where  students from around the world can access knowledge through notes like never before. Created in 2017, by a group of student of Vivekananda Institute of Professional Studies
+It has stemmed out from the idea that the more knowledge you share, the more it empowers you. And Edugyan truly give you that opportunity in the real sense of the word. It lets you access self-prepared academic notes. </h3>
+<h3>Edugyan is an online educational marketplace that aims to provide a platform where  students from around the world can access knowledge through notes like never before. Created in 2017, by a group of student of Vivekananda Institute of Professional Studies
+It has stemmed out from the idea that the more knowledge you share, the more it empowers you. And Edugyan truly give you that opportunity in the real sense of the word. It lets you access self-prepared academic notes.</h3>
+
+            
+</div>
+      	
+      </div>
+	
+</section>
+<!--Aboutus--> 
+</div>
+<div class="content_main-services">
+<!--Service-->
+<section  id="service">
+  <div class="container">
+    <h2><hr> Services</h2>
+    <div class="service_wrapper">
+        <div id="left-block">
+            <h3>Notes</h3>
+            <p >Edugyan provide you a marketplace where you can get notes</p>
+          </div>
+        <div id="center-block">			
+            <h3 >Question Papers</h3>
+            <p >Edugyan provide you a marketplace where you can get Previous year question</p>
+          </div>
+        <div id="right-block">
+            <h3 >Technology</h3>
+            <p >You can walk into any of our project room and see exactly where we are at in a single glance whether we are consulting on test strategy or your customer experience, building an application or simply helping make a tough decision.</p>
+        </div>
+      </div>
+	   </div>
+</section>
+<!--Service-->
+</div>
+
+
+
+<div class="content-our-team" id="team">
+<h2><hr> OUR TEAM</h2>
+<p>Meet the team - our office rats:</p>
+<br>
+<div class="service_wrapper">
+<div class="first">
+  <img oncl="fire.html" src="images/student.png" >
+  <h3>Nandini Jain</h3>
+  <h3>Data Managment</h3>
+</div>
+
+<div class="second">
+  <img src="images/student.png" >
+  <h3>Prateek Batra</h3>
+  <h3>Web Designer</h3>
+</div>
+
+<div class="third">
+  <img src="images/student.png" >
+  <h3>Saksham Bist</h3>
+  <h3>Content Management</h3>
+</div>
+<div class="fourth">
+  <img src="images/student.png" >
+  <h3>Sajid Ansari</h3>
+  <h3>Web Designer</h3>
+</div>
+</div>
+</div>
+<div id="footer">
+<div class="footer-distributed">
+
+      <div class="footer-left">
+
+        <h3>Edu<span>Gyan</span></h3>
+
+        <p class="footer-links">
+          <a href="#">About Us</a>
+          ·
+          <a href="#">Services</a>
+          ·
+          <a href="#">Team</a>
+          ·
+          <a href="#">Faq</a>
+          ·
+        </p>
+
+        <p class="footer-company-name">Edugyan &copy; 2017 | Design By Prateek Batra</p>
+
+      </div>
+
+      <div class="footer-center">
+
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>21 Revolution Street</span> Paris, France</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+1 555 123456</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:storage.edugyan@gmail.com">helpdesk@edugyan.com</a></p>
+        </div>
+        <p class="footer-made">Made With &#10084; In INDIA</p><br>
+        <p>Backend Script By Firebase</p>
+
+
+      </div>
+
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span>About the company</span>
+          Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+        </p>
+
+        <div class="footer-icons">
+
+          <img src="images/facebook.png">
+          <img src="images/twitter.png">
+          <img src="images/linkedin.png">
+          <img src="images/github.png">
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDWHO933TJaZFOXPV48BXZWNeaQikEIn9Q",
+    authDomain: "edugyan-f6603.firebaseapp.com",
+    databaseURL: "https://edugyan-f6603.firebaseio.com",
+    storageBucket: "edugyan-f6603.appspot.com",
+    messagingSenderId: "462034433610"
+  };
+  firebase.initializeApp(config);
+</script>
+</script>
+<script src="script/javas.js"></script>
+    <script src="script/ja2.js"></script>
+        <script src="script/fire.js"></script>
+		<script src="script/loading.js"></script>
+
+
+
+</body>
+</html>
